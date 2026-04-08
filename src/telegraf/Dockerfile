@@ -1,5 +1,5 @@
-FROM telegraf:1.14.2
+FROM telegraf:1.38.0
 
-RUN apt-get update && apt-get install -y python3-pip && pip3 install speedtest-cli && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y speedtest-cli && rm -rf /var/lib/apt/lists/*
 
 COPY telegraf.conf /etc/telegraf/telegraf.conf
